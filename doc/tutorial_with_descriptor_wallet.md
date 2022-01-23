@@ -8,6 +8,7 @@
 ### Linux
 #### Download & Install
 ```console
+$ cd ~
 $ git clone https://github.com/LNP-BP/descriptor-wallet
 $ cd descriptor-wallet
 $ cargo install --path . --locked --all-features
@@ -84,6 +85,7 @@ $ btc-cold finalize --publish testnet tx.psbt
 ### Linux:
 #### Download & Install
 ```console
+$ cd ~
 $ git clone https://github.com/LNP-BP/rgb-node.git
 $ cd rgb-node
 $ cargo install --all-features --bins --path .
