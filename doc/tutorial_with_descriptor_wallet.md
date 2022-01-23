@@ -1,8 +1,8 @@
 # LNP/BP Descriptor Wallet
 # LNP/BP rgb-node
 
-- All commands are for `testnet` so not for `mainnet`
-- This tutorial is just a start to make it more easy for people to `on-board` the `descriptor wallet` and using `rgb`(node)
+- All commands are for `testnet`
+- This tutorial is just a start to make it more easy for people to use the `descriptor wallet` and `rgb`(node)
 
 ## LNP/BP Descriptor Wallet
 ### Linux
