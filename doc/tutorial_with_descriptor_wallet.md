@@ -26,7 +26,7 @@ $ btc-hot derive -s bip84 --testnet wallet.seed bip84_wallet_testnet
 
 Optional: create a taproot hot wallet (bip86) file based on the seed for signing transactions:
 ```console
-$ btc-hot derive -s bip88 --testnet wallet.seed tr_wallet_testnet
+$ btc-hot derive -s bip86 --testnet wallet.seed tr_wallet_testnet
 ```
 
 Result (example), this is the 'descriptor' that you will need later in the process to create a 'cold wallet':
