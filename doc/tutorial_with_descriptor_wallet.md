@@ -11,7 +11,7 @@
   - `~./wallet/psbt/`:  containing your `PSBT` files that have to be signed, or have been signed by your `signing` wallets.
     
 ## LNP/BP Descriptor Wallet
-### Linux / Windows
+### Linux 
 [ ] Firstly, you will need to download and install `rust`. 
 
 #### Download & Install
@@ -92,7 +92,7 @@ $ btc-cold finalize --publish testnet ~./wallet/psbt/tx.psbt
 ```
  
 # LNP/BP rgb-node
-### Linux / Windows
+### Linux 
 #### Download & Install
 ```console
 $ cd ~
