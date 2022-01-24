@@ -3,15 +3,17 @@
 
 - All commands in this turotial are for the `testnet` of Bitcoin. 
 - This tutorial is just a start to make it more easy for people to use the `descriptor wallet` and `rgb`(node)
-- For clarity, and to circumvent any confusion, we suggest and propose that you will create a dedicated directory for the following files that will be created by the `descriptor wallet` in various stages such as: 
-(-) `~./wallet/seeds/`: This directory will contain your seeds that will be created from the `btc-hot` wallet. 
-(-) `~./wallet/signs/`: This directory will contain your `signing` wallets to sign transactions created the `btc-hot` wallet. 
-(-) `~./wallet/track/`: This directory will contain your `tracking` wallets to track your funds from your wallet and to construct `PSBT` files.  
-(-) `~./wallet/psbt/`: This directory will contain your `PSBT` files that have to be signed, or have been signed by your `signing` wallets.
+- For clarity, and to circumvent any confusion, we[^1] suggest that you will create a dedicated directory for the following files that will be created by the `descriptor wallet` in various stages such as: 
+
+  - `~./wallet/seeds/`: containing your seeds that will be created from the `btc-hot` wallet. 
+  - `~./wallet/signs/`: containing your `signing` wallets to sign transactions created the `btc-hot` wallet. 
+  - `~./wallet/track/`: containing your `tracking` wallets to track your funds from your wallet and to construct `PSBT` files.  
+  - `~./wallet/psbt/`:  containing your `PSBT` files that have to be signed, or have been signed by your `signing` wallets.
     
 ## LNP/BP Descriptor Wallet
 ### Linux / Windows
-[ ]] Firstlly, you will need to download and install `rust`. 
+[ ] Firstly, you will need to download and install `rust`. 
+
 #### Download & Install
 ```console
 $ cd ~
@@ -37,10 +39,12 @@ $ btc-hot derive -s bip86 --testnet ~./wallet/seeds/seed ~./wallet/signs/tr_wall
 ```
 
 Result (example), this is the 'descriptor' that you will need later in the process to create a 'cold wallet':
-- `wpkh(m=[f8184019]/84h/1/0h=[tpubDCny2AW1LgQoPkMUodFvadjKTKBoP7vGNCm8irYhBTLaKeuqyiqt7VzwF8J2akynwjcZ1iofi6iM4Nd6ey7Sfrg1ZTRLtrEFqcn9qEjeNLp]/*/*)#eykq8mdh`
+
+`wpkh(m=[f8184019]/84h/1/0h=[tpubDCny2AW1LgQoPkMUodFvadjKTKBoP7vGNCm8irYhBTLaKeuqyiqt7VzwF8J2akynwjcZ1iofi6iM4Nd6ey7Sfrg1ZTRLtrEFqcn9qEjeNLp]/*/*)#eykq8mdh`
 
 Or for taproot wallet:
-- `tr(m=[f8184019]/86h/1/0h=[tpubDC2X2CtAcNuj5KATTmXPs6xQxKVAL1Fc1cW2rfZV3xQtaHxsdPdKz7NLgK4xX6HKCk6WwUP3dU8powVPZfVRjZYRFe4rP77KgcF5SpV4rra]/*/*)#zv69kr4y`
+
+`tr(m=[f8184019]/86h/1/0h=[tpubDC2X2CtAcNuj5KATTmXPs6xQxKVAL1Fc1cW2rfZV3xQtaHxsdPdKz7NLgK4xX6HKCk6WwUP3dU8powVPZfVRjZYRFe4rP77KgcF5SpV4rra]/*/*)#zv69kr4y`
 
 #### Create a cold wallet
 Create a cold `tracking wallet` based on the hot wallet that was created in the previous process:
@@ -88,7 +92,7 @@ $ btc-cold finalize --publish testnet ~./wallet/psbt/tx.psbt
 ```
  
 # LNP/BP rgb-node
-### Linux:
+### Linux / Windows
 #### Download & Install
 ```console
 $ cd ~
@@ -102,3 +106,4 @@ $ cargo install --all-features --bins --path .
 #### Transfer the token to third party, and publish it 
 #### Transfer the files to third party and finalze the transfer
 
+[^1]: Thanks to [ ]  for this suggestion!
